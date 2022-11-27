@@ -88,3 +88,8 @@ def hailstone(n):
 
     print(n)
     return steps
+
+"""
+-- Pure functions - just return values
+-- Non-pure functions -- have side effects
+ """
