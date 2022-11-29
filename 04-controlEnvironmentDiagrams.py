@@ -60,3 +60,21 @@ def make_adder(n):
     def adder(k):
         return k + n
     return adder
+
+def triple(x):
+    return 3 * x
+
+def compose1(f,g):
+    def h(x):
+        return f(g(x))
+    return h
+
+"""
+interative env example:
+
+squadder = compose1(square, triple)
+-- then call squadder(5) or any number
+OR
+compose1(square, make_adder(2))(3)
+ = 25
+"""
