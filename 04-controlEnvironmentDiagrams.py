@@ -84,6 +84,21 @@ compose1(square, make_adder(2))(3)
 - Lambda expressiosn cant use return statements, so only one liners
 - lambda expressions dont create instrinsic function names, only def statements do
 
+num_squared = lambda x: x * x
+
 """
 
 # FUNCTION CURRYING
+"""
+- currying is transofmring a multiargument function into a single argument, higher order function
+
+def curry2(f):
+    def g(x):
+        def h(y):
+            return f(x, y)
+        return h
+    return g
+
+curry2 = lambda f: lamdbda x: lambda y: f(x,y)
+
+ """
