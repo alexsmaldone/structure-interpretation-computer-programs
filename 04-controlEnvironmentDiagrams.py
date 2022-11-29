@@ -50,3 +50,13 @@ def so_slow(num):
     while x > 0:
         x = x + 1
     return x / 0
+
+
+# ================================
+# Environment for NEsted Definitions
+# ================================
+
+def make_adder(n):
+    def adder(k):
+        return k + n
+    return adder
