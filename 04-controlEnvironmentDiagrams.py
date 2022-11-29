@@ -78,3 +78,12 @@ OR
 compose1(square, make_adder(2))(3)
  = 25
 """
+
+# LAMBDA EXPRESSIONS
+"""
+- Lambda expressiosn cant use return statements, so only one liners
+- lambda expressions dont create instrinsic function names, only def statements do
+
+"""
+
+# FUNCTION CURRYING
