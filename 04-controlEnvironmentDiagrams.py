@@ -61,8 +61,7 @@ def make_adder(n):
         return k + n
     return adder
 
-def triple(x):
-    return 3 * x
+
 
 def compose1(f,g):
     def h(x):
@@ -102,3 +101,16 @@ def curry2(f):
 curry2 = lambda f: lamdbda x: lambda y: f(x,y)
 
  """
+
+
+#  FUNCTION DECORATORS
+
+def trace(fn):
+    def wrapped(x):
+        print('-> ', fn, '(', x, ')')
+        return fn(x)
+    return wrapped
+
+@trace
+def triple(x):
+    return 3 * x
