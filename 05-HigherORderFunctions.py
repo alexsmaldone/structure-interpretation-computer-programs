@@ -28,3 +28,15 @@ def product(n, term):
     >>> product(3, triple)    # 1*3 * 2*3 * 3*3
     162
     """
+    total, k = 1, 1
+    while k <= n:
+        total = term(k) * total
+        k = k + 1
+    return total
+
+print(product(3, identity))
+print(product(5, identity))
+print(product(3, square))
+print(product(5, square))
+print(product(3, increment))
+print(product(3, triple))
