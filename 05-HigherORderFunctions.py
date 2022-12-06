@@ -64,3 +64,13 @@ def accumulate(merger, start, n, term):
         total = merger(total, term(k))
         k = k + 1
     return total
+
+
+def summation_using_accumulate(n, term):
+    """Returns the sum: term(0) + ... + term(n), using accumulate
+    >>> summation_using_accumulate(5, square)
+    55
+    >>> summation_using_accumulate(5, triple)
+    45
+    """
+    return accumulate(add, 0, n, term)
