@@ -74,3 +74,14 @@ def summation_using_accumulate(n, term):
     45
     """
     return accumulate(add, 0, n, term)
+
+
+def product_using_accumulate(n, term):
+    """Returns the product: term(1) * ... * term(n), using accumulate.
+
+    >>> product_using_accumulate(4, square)
+    576
+    >>> product_using_accumulate(6, triple)
+    524880
+    """
+    return accumulate(mul, 1, n, term=)
